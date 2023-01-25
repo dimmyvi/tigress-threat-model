@@ -80,7 +80,7 @@ server at the same time
 public standards (e.g., Car Connectivity Consortium) and proprietary (i.e.,
 non-public or closed community) formats
 
-From these goals we can derive a threat model.
+From these goals we can derive a threat model for the general problem space. 
 
 # Threat Model
 ## Assets and Data
@@ -91,12 +91,21 @@ From these goals we can derive a threat model.
 ## Sender
 ## Receiver
 # Attackers and Motivations
-# Threats and miigations
+# Threats and mitigations
+
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
 |An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementors SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
-|
 
+## If an itemediary server is used
+Some designs may rely on an intermediary server to facilitat the transfer of material. Below are threats and mitigations assuming that there is an intermidary server hosting encrypted content at an "unguessible" location.
+
+|Threat Description|Likelihood|Impact|Mitigations|
+|:-----------------|----------|------|-----------|
+|Attacker brute forces "unguessible" location|LOW|LOW|Limited TTL of storage, rate limiting of requests|
+|Attacker intercepts encryption key|MED|MED|Seperate transimission of encryption key and unguessible location|
+|Attacker intercepts encryption key and unguessible location|MED|HIGH|Implementor should warn users about sharing credentials to groups|
+|Attacker compromises itermediary server|LOW|LOW|Content on the server is encrypted|
 
 
 # Conventions and Definitions
