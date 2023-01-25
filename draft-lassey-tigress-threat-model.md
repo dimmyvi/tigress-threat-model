@@ -96,6 +96,10 @@ From these goals we can derive a threat model for the general problem space.
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
 |An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementors SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
+|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH||
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH||
+|Sender device compromised|MED|HIGH||
+
 
 ## If an itemediary server is used
 Some designs may rely on an intermediary server to facilitat the transfer of material. Below are threats and mitigations assuming that there is an intermidary server hosting encrypted content at an "unguessible" location.
@@ -106,6 +110,8 @@ Some designs may rely on an intermediary server to facilitat the transfer of mat
 |Attacker intercepts encryption key|MED|MED|Seperate transimission of encryption key and unguessible location|
 |Attacker intercepts encryption key and unguessible location|MED|HIGH|Implementor should warn users about sharing credentials to groups|
 |Attacker compromises itermediary server|LOW|LOW|Content on the server is encrypted|
+|Attacker uses itermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|Itermediary server should have tight size limits and TTLS to discourage misuse|
+
 
 
 # Conventions and Definitions
