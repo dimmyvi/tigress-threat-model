@@ -40,12 +40,51 @@ TODO Abstract
 --- middle
 
 # Introduction
+The TIGRESS Working Group is chartered to deliver a protocol for transfering copies of digital credentials. The charter specifies certain goals:
 
-TODO Introduction
+## Privacy goals:
+
+* The relay server should not see sensitive details of the share
+
+* The relay server should not be able to provision the credential itself,
+acting as an intermediary for the recipient (person-in-the-middle,
+impersonation attack)
+
+* Aside from network-level metadata, the relay server should not learn
+information about the sender or receiver
+
+## Security goals:
+
+* Ensure only the intended recipient is able to provision the credential
+
+* Ensure the credential can only be provisioned once (anti-replay)
+
+* Ensure the sender has the intent to transfer (proof of the fact that the
+share initiation is attributed to a valid device and a user)
+
+## Functional goals:
+* Allow a sender to initiate a share and select a relay server
+
+* Allow a recipient to view the share request, and provision the credential
+associated with the share upon receipt
+
+* Allow a sender and a recipient to perform multiple round trip communications
+within a limited time frame
+
+* Not require that both the sender and recipient have connectivity to the relay
+server at the same time
+
+* Support opaque message content based on the credential type
+
+* Support a variety of types of credentials, to include those adhering to
+public standards (e.g., Car Connectivity Consortium) and proprietary (i.e.,
+non-public or closed community) formats
+
+From these goals we can derive a threat model.
+
 # Threat Model
 
-Threat model for the sample implementation is provided at the following URL:
-[threat_model]: https://github.com/dimmyvi/tigress-sample-implementation/blob/main/threat_model.png "Threat model for Tigress sample implementation"
+
 
 | Item |   Asset    |   Threat               |     Impact                       |     Mitigation                           | Comment |
 |:-----|:-----------|:-----------------------|:---------------------------------|:-----------------------------------------|:--------|
