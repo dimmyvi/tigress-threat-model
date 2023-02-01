@@ -62,6 +62,9 @@ information about the sender or receiver
 * Ensure the sender has the intent to transfer (proof of the fact that the
 share initiation is attributed to a valid device and a user)
 
+* Ensure the receiver trusts the content of a share coming from a certain intermediary server (if a solution with an intermediary server is used)
+ 
+
 ## Functional goals:
 * Allow a sender to initiate a share and select a relay server
 
@@ -70,6 +73,8 @@ associated with the share upon receipt
 
 * Allow a sender and a recipient to perform multiple round trip communications
 within a limited time frame
+
+* In case when multiple round trip communications happen through the relay server, allow mechanism of binding a sender and receiver devices to the mailbox for the time of exchange. A second receiver device shall not be able to overwrite the content already updated by a first receiver device.
 
 * Not require that both the sender and recipient have connectivity to the relay
 server at the same time
