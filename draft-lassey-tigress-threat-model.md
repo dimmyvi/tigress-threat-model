@@ -40,7 +40,7 @@ TODO Abstract
 --- middle
 
 # Introduction
-The TIGRESS Working Group is chartered to deliver a protocol for transfering copies of digital credentials. The charter specifies certain goals:
+The TIGRESS Working Group is chartered to deliver a protocol for transferring copies of digital credentials. The charter specifies certain goals:
 
 ## Privacy goals:
 
@@ -102,20 +102,20 @@ The user who is the intended recipient and accepts the invitation to share a cre
 |:-----------------|----------|------|-----------|
 |An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementors SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
 |Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH||
-|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH||
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementors should ensure any initiated shares can be withdrawn or revoked at any time.|
 |Sender device compromised|MED|HIGH||
 
 
-## If an itemediary server is used
-Some designs may rely on an intermediary server to facilitat the transfer of material. Below are threats and mitigations assuming that there is an intermidary server hosting encrypted content at an "unguessible" location.
+## If an intermediary server is used
+Some designs may rely on an intermediary server to facilitate the transfer of material. Below are threats and mitigations assuming that there is an intermediary server hosting encrypted content at an "unguessible" location.
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
 |Attacker brute forces "unguessible" location|LOW|LOW|Limited TTL of storage, rate limiting of requests|
 |Attacker intercepts encryption key|MED|MED|Seperate transimission of encryption key and unguessible location|
 |Attacker intercepts encryption key and unguessible location|MED|HIGH|Implementor should warn users about sharing credentials to groups|
-|Attacker compromises itermediary server|LOW|LOW|Content on the server is encrypted|
-|Attacker uses itermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|Itermediary server should have tight size limits and TTLS to discourage misuse|
+|Attacker compromises intermediary server|LOW|LOW|Content on the server is encrypted|
+|Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|intermediary server should have tight size limits and TTLS to discourage misuse|
 
 
 
