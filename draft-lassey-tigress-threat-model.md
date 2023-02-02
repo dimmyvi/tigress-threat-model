@@ -85,11 +85,16 @@ From these goals we can derive a threat model for the general problem space.
 # Threat Model
 ## Assets and Data
 ### Credential
+The credential or key that is being shared via this protocol.
 ### Intermediary data
+Data that is shared over the course of the transaction.
 ### Share invitation
+The initial data shared with the reciever which represents an invitation to share a credential.
 # Users
 ## Sender
+The user who initiates the share.
 ## Receiver
+The user who is the intended recipient and accepts the invitation to share a credential.
 # Attackers and Motivations
 # Threats and mitigations
 
@@ -119,10 +124,6 @@ Some designs may rely on an intermediary server to facilitat the transfer of mat
 {::boilerplate bcp14-tagged}
 
 
-# Security Considerations
-
-TODO Security
-
 
 # IANA Considerations
 
@@ -134,4 +135,4 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+This document took as inspiration the [threat model](https://github.com/dimmyvi/tigress-sample-implementation/blob/main/draft-tigress-sample-implementation.md#threat-model) that was part of Dmitry Vinokurov's sample implementation document.
