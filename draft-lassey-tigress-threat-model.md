@@ -9,18 +9,18 @@ number:
 date:
 consensus: false
 v: 3
-area: ART
-workgroup: TIGRESS WG
+area: "Applications and Real-Time"
+workgroup: "Transfer dIGital cREdentialS Securely"
 keyword:
  - tigress
  - threat model
 venue:
-  group: TIGRESS
-  type: Working Group
-  mail: tigress@ietf.org
-  arch: https://datatracker.ietf.org/wg/tigress/about/
-  github: lassey/tigress-threat-model
-  latest: https://github.com/bslassey/tigress-threat-model/edit/main/draft-lassey-tigress-threat-model.md
+  group: "Transfer dIGital cREdentialS Securely"
+  type: "Working Group"
+  mail: "tigress@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/tigress/"
+  github: "bslassey/tigress-threat-model"
+  latest: "https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-threat-model.html"
 author:
  -
     fullname: Brad Lassey
