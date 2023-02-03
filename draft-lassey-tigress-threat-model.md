@@ -4,7 +4,7 @@ title: "TIGRESS Threat Model"
 category: info
 
 docname: lassey-tigress-threat-model-latest
-submissiontype: IET
+submissiontype: IETF
 number:
 date:
 consensus: false
