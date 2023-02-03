@@ -3,7 +3,7 @@
 title: "TIGRESS Threat Model"
 category: info
 
-docname: lassey-tigress-threat-model-latest
+docname: draft-lassey-tigress-threat-model-latest
 submissiontype: IETF
 number:
 date:
