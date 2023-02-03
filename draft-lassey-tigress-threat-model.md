@@ -26,6 +26,10 @@ author:
     fullname: Brad Lassey
     organization: Google
     email: lassey@google.com
+-
+    fullname: Casey Astiz
+    organization: Apple
+    email: castiz@apple.com
 
 normative:
 
@@ -34,7 +38,7 @@ informative:
 
 --- abstract
 
-TODO Abstract
+This document describes a threat model by which the working group can evaluate potential solutions to the problems laid out in the TIGRESS charter.
 
 
 --- middle
