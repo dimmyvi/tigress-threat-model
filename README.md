@@ -2,7 +2,7 @@
 
 This is the working area for the individual Internet-Draft, "TIGRESS Threat Model".
 
-* [Editor's Copy](https://bslassey.github.io/tigress-threat-model/#go.draft-lassey-tigress-threat-model.html)
+* [Editor's Copy](https://bslassey.github.io/tigress-threat-model/draft-lassey-tigress-threat-model.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-lassey-tigress-threat-model)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-lassey-tigress-threat-model)
 * [Compare Editor's Copy to Individual Draft](https://bslassey.github.io/tigress-threat-model/#go.draft-lassey-tigress-threat-model.diff)
