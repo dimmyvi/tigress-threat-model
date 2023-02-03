@@ -80,7 +80,7 @@ server at the same time
 public standards (e.g., Car Connectivity Consortium) and proprietary (i.e.,
 non-public or closed community) formats
 
-From these goals we can derive a threat model for the general problem space. 
+From these goals we can derive a threat model for the general problem space.
 
 # Threat Model
 ## Assets and Data
