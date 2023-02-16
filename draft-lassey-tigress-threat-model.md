@@ -59,11 +59,11 @@ information about the sender or receiver
 
 ## Security goals:
 
-* Ensure only the intended recipient is able to provision the credential
+* Allow for ensuring that only the intended recipient is able to provision the credential
 
-* Ensure the credential can only be provisioned once (anti-replay)
+* Allow for ensuring that the credential can only be provisioned once (anti-replay)
 
-* Ensure the sender has the intent to transfer (proof of the fact that the
+* Allow for ensuring that the sender has the intent to transfer (proof of the fact that the
 share initiation is attributed to a valid device and a user)
 
 ## Functional goals:
