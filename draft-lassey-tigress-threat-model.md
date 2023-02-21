@@ -116,7 +116,7 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
 |Attacker brute forces "unguessable" location|LOW|LOW|Limited TTL of storage, rate limiting of requests|
-|Attacker intercepts encryption key|MED|MED|Seperate transimission of encryption key and unguessable location|
+|Attacker intercepts encryption key|MED|MED|Separate transmission of encryption key and unguessable location|
 |Attacker intercepts encryption key and unguessable location|MED|HIGH|Implementor should warn users about sharing credentials to groups|
 |Attacker compromises intermediary server|LOW|LOW|Content on the server is encrypted|
 |Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|intermediary server should have tight size limits and TTLS to discourage misuse|
