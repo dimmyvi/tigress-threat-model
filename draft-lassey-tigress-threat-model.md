@@ -104,9 +104,9 @@ The user who is the intended recipient and accepts the invitation to share a cre
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementors SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
+|An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
 |Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to share a secret out of band|
-|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementors should ensure any initiated shares can be withdrawn or revoked at any time.|
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementers should ensure any initiated shares can be withdrawn or revoked at any time.|
 |Sender device compromised|MED|HIGH||
 
 
