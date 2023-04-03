@@ -93,7 +93,7 @@ The credential or key that is being shared via this protocol.
 ### Intermediary data
 Data that is shared over the course of the transaction.
 ### Share invitation
-The initial data shared with the reciever which represents an invitation to share a credential.
+The initial data shared with the receiver which represents an invitation to share a credential.
 # Users
 ## Sender
 The user who initiates the share.
