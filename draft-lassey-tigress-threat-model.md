@@ -34,7 +34,27 @@ author:
 normative:
 
 informative:
+  Tigress-req-03:
+    author:
+    -
+      ins: D. Vinokurov
+      name: Dmitry Vinokurov
+    -
+      ins: A. Pelletier
+      name: Alex Pelletier
+    -
+      ins: C. Astiz
+      name: Casey Astiz
+    -
+      ins: B Lassey
+      name: Brad Lassey
+    -
+      ins: Y. Karandikar
+      name: Yogesh Karandikar
 
+    title: "Tigress requirements"
+    date: 2023-04
+    target: https://github.com/dimmyvi/tigress-requirements/
 
 --- abstract
 
@@ -48,13 +68,13 @@ The TIGRESS Working Group is [chartered](https://datatracker.ietf.org/doc/charte
 
 ## Privacy goals:
 
-* The relay server should not see sensitive details of the share
+* The intermediate server should not see sensitive details of the Provisioning Information {{Tigress-req-03}}
 
-* The relay server should not be able to provision the credential itself,
+* The intermediate server should not be able to provision the credential itself,
 acting as an intermediary for the recipient (person-in-the-middle,
 impersonation attack)
 
-* Aside from network-level metadata, the relay server should not learn
+* Aside from network-level metadata, the intermediate server should not learn
 information about the sender or receiver
 
 ## Security goals:
@@ -64,18 +84,17 @@ information about the sender or receiver
 * Allow for ensuring that the credential can only be provisioned once (anti-replay)
 
 * Allow for ensuring that the sender has the intent to transfer (proof of the fact that the
-share initiation is attributed to a valid device and a user)
+initiation of the credential transfer is attributed to a valid device and a user)
 
 ## Functional goals:
-* Allow a sender to initiate a share and select a relay server
+* Allow a sender to initiate a credential transfer and select an intermediary server
 
-* Allow a recipient to view the share request, and provision the credential
-associated with the share upon receipt
+* Allow a recipient to view the transfer request with Provisioning Information {{Tigress-req-03}}, and provision the credential information associated with it upon receipt
 
 * Allow a sender and a recipient to perform multiple round trip communications
 within a limited time frame
 
-* Not require that both the sender and recipient have connectivity to the relay
+* Not require that both the sender and recipient have connectivity to the intermediary
 server at the same time
 
 * Support opaque message content based on the credential type
@@ -89,24 +108,24 @@ From these goals we can derive a threat model for the general problem space.
 # Threat Model
 ## Assets and Data
 ### Credential
-The credential or key that is being shared via this protocol.
+The credential or key that is being transferred via this protocol.
 ### Intermediary data
-Data that is shared over the course of the transaction.
-### Share invitation
-The initial data shared with the receiver which represents an invitation to share a credential.
+Data that is transferred over the course of the transaction.
+### Credential transfer invitation
+The initial data containing Provisioning Information {{Tigress-req-03}} transmetted to the receiver which represents an invitation to accept the transferred credential.
 # Users
 ## Sender
-The user who initiates the share.
+The user who initiates the credential transfer.
 ## Receiver
-The user who is the intended recipient and accepts the invitation to share a credential.
+The user who is the intended recipient and accepts the invitation with the transferred credential.
 # Attackers and Motivations
 # Threats and mitigations
 
 |Threat Description|Likelihood|Impact|Mitigations|
 |:-----------------|----------|------|-----------|
-|An Attacker with physical access to the victim's phone initiates a share of a Credential to the the Attacker's device|MED|HIGH|Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a share such as requiring authentication at share time|
-|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to share a secret out of band|
-|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementers should ensure any initiated shares can be withdrawn or revoked at any time.|
+|An Attacker with physical access to the victim's phone initiates the transfer of a Credential to the the Attacker's device|MED|HIGH|Implementers SHOULD take sufficient precautions to ensure that the device owner is in possession of the device when initiating a transfer such as requiring authentication at the time of initition|
+|Attacker intercepts or eavesdrops on sharing message|HIGH|HIGH|Solution should require an end-to-end encrypted messaging channel or otherwise specify a way to send a secret out of band|
+|Sender mistakenly sends to the wrong Receiver|HIGH|HIGH|Implementers should ensure any initiated attempts of credential transfer can be withdrawn or revoked at any time.|
 |Sender device compromised|MED|HIGH||
 
 
@@ -117,7 +136,7 @@ Some designs may rely on an intermediary server to facilitate the transfer of ma
 |:-----------------|----------|------|-----------|
 |Attacker brute forces "unguessable" location|LOW|LOW|Limited TTL of storage, rate limiting of requests|
 |Attacker intercepts encryption key|MED|MED|Separate transmission of encryption key and unguessable location|
-|Attacker intercepts encryption key and unguessable location|MED|HIGH|Implementor should warn users about sharing credentials to groups|
+|Attacker intercepts encryption key and unguessable location|MED|HIGH|Implementor should warn users about transferring credentials to groups|
 |Attacker compromises intermediary server|LOW|LOW|Content on the server is encrypted|
 |Attacker uses intermediary server to store unrelated items (i.e. cat pictures)|HIGH|LOW|intermediary server should have tight size limits and TTLS to discourage misuse|
 
